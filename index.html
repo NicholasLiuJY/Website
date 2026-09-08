@@ -8,20 +8,293 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* ============================================================
+     SLATE NAVY & AMBER PALETTE + MOBILE OPTIMIZATIONS
+     ============================================================ */
+  
+  :root {
+    --color-navy: #0F172A;
+    --color-navy-light: #1E293B;
+    --color-off-white: #F8FAFC;
+    --color-slate-dark: #334155;
+    --color-slate-medium: #64748B;
+    --color-amber: #D97706;
+    --color-amber-hover: #B45309;
+    --color-whatsapp: #25D366;
+    --color-border: #E2E8F0;
+  }
+
+  /* Override primary colors */
+  body {
+    background-color: var(--color-off-white);
+    color: var(--color-slate-dark);
+  }
+
+  /* Headers & Typography */
+  h1, h2, h3, h4, h5, h6,
+  .serif {
+    color: var(--color-navy);
+  }
+
+  .sec-title {
+    color: var(--color-navy);
+  }
+
+  /* Primary CTA Buttons */
+  .btn-primary {
+    background-color: var(--color-amber);
+    color: white;
+    border: 2px solid var(--color-amber);
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-amber-hover);
+    border-color: var(--color-amber-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+  }
+
+  /* Secondary Buttons */
+  .btn-ghost {
+    color: var(--color-navy);
+    border: 2px solid var(--color-navy);
+    transition: all 0.3s ease;
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--color-navy);
+    color: white;
+  }
+
+  /* Statement/Nav Bar */
+  .statement-bar {
+    background-color: white;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .brand {
+    color: var(--color-navy);
+    font-weight: 700;
+  }
+
+  .nav-links a {
+    color: var(--color-slate-dark);
+  }
+
+  .nav-links a:hover {
+    color: var(--color-navy);
+  }
+
+  /* Section Tags */
+  .sec-tag {
+    color: var(--color-amber);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  /* Credential Cards */
+  .cred-card {
+    border: 1px solid var(--color-border);
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .cred-card:hover {
+    border-color: var(--color-amber);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.1);
+  }
+
+  .cred-index {
+    color: var(--color-amber);
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .cred-headline {
+    color: var(--color-navy);
+  }
+
+  .cred-line {
+    background-color: var(--color-amber);
+    height: 2px;
+    width: 2rem;
+    margin: 0.75rem 0;
+  }
+
+  /* Help Cards */
+  .help-card {
+    border: 1px solid var(--color-border);
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .help-card:hover {
+    border-color: var(--color-amber);
+    background-color: rgba(217, 119, 6, 0.02);
+    transform: translateY(-4px);
+  }
+
+  .help-name {
+    color: var(--color-navy);
+  }
+
+  /* Process Steps */
+  .process-key {
+    color: var(--color-amber);
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .process-row h3 {
+    color: var(--color-navy);
+  }
+
+  /* Form Styling */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-slate-dark);
+    background-color: white;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus,
+  .contact-form select:focus {
+    outline: none;
+    border-color: var(--color-amber);
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+  }
+
+  .contact-form label {
+    color: var(--color-navy);
+    font-weight: 600;
+  }
+
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    background-color: var(--color-amber);
+  }
+
+  /* Social Icons */
+  .social-icon {
+    color: var(--color-slate-dark);
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: var(--color-amber);
+  }
+
+  /* Footer */
+  footer {
+    background-color: var(--color-navy);
+    color: white;
+  }
+
+  .disclosure {
+    color: var(--color-slate-medium);
+    font-size: 0.875rem;
+    margin-top: 2rem;
+  }
+
+  /* ============================================================
+     MOBILE FLOATING WHATSAPP BUTTON
+     ============================================================ */
+  
+  .floating-whatsapp {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    z-index: 999;
+    background-color: var(--color-whatsapp);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .floating-whatsapp:hover {
+    background-color: #1DA851;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  }
+
+  .floating-whatsapp svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  /* Show floating button on mobile only */
+  @media (max-width: 767px) {
+    .floating-whatsapp {
+      display: flex !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .floating-whatsapp {
+      display: none !important;
+    }
+  }
+
+  /* ============================================================
+     RESPONSIVE ADJUSTMENTS
+     ============================================================ */
+
+  @media (max-width: 768px) {
+    .statement-bar .nav-links {
+      display: none;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
 </head>
 <body>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
+<a href="https://wa.me/6584256151?text=Hi%20Nicholas%2C%20I%27d%20like%20to%20discuss%20my%20financial%20plans." class="floating-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.951 1.263l-.355.192-.368-.06c-.379-.063-.751-.124-1.122-.124-2.508 0-4.565 2.058-4.565 4.566 0 .99.289 1.912.818 2.687l.275.46-.458.91c-.385.77-.852 1.707-1.077 2.286.637-.173 1.522-.52 2.291-.915l.39-.21.415.079c.845.159 1.738.243 2.649.243 2.508 0 4.565-2.058 4.565-4.566 0-.386-.053-.764-.16-1.128z"/>
+  </svg>
+  Chat on WhatsApp
+</a>
+
 <div class="social-rail">
   <a href="https://www.instagram.com/nicholas_liujy/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M18.5 6.5h.01"/></svg>
   </a>
   <a href="https://www.youtube.com/@NicholasLJY" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10.5 9L15 12l-4.5 3z"/></svg>
   </a>
   <a href="https://t.me/NicLiuJY" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2 10.2l6 2.2M21.5 2.5L14.6 20l-3.6-6.6M21.5 2.5L8.6 13.4"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2 10.2l6 2.2M21.5 2.5L14.6 20l-3.6-6.6M21.5 2.5L8.6 12.2"/></svg>
   </a>
   <a href="mailto:nicholasliu3005@gmail.com" class="social-icon" aria-label="Email">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
@@ -46,7 +319,7 @@
   <div>
     <div class="eyebrow">Financial Advisory · Alliance Advisor Group</div>
     <h1 class="serif">Plan with clarity.<br>Build for decades,<br>not quarters.</h1>
-    <p class="lede">I help individuals and families build long-term financial roadmaps — wealth accumulation, retirement readiness, and multi-generational legacy planning — grounded in clear numbers and regular reviews.</p>
+    <p class="lede">I help individuals and families build long-term financial roadmaps — wealth accumulation, retirement readiness, and multi-generational legacy planning — grounded in clear numbers and real understanding.</p>
     <p class="lede-note mono">Nicholas Liu · Alliance Advisor Group · FC 26528</p>
     <div class="hero-actions">
       <a href="https://wa.me/6584256151?text=Hi%20Nicholas%2C%20I%27d%20like%20to%20discuss%20my%20financial%20plans." class="btn btn-primary">Chat on WhatsApp</a>
@@ -100,9 +373,9 @@
     <div class="about-text reveal">
       <div class="sec-tag mono">MY STORY</div>
       <h2 class="sec-title">Trained in numbers. Focused on people.</h2>
-      <p>My background in finance started early — a <strong>Diploma in Banking &amp; Finance from Nanyang Polytechnic</strong>, followed by a <strong>Bachelor of Business at Nanyang Technological University</strong> (First Class Honours, 4.66/5.00). That foundation shapes how I think about money — systematically and rigorously.</p>
+      <p>My background in finance started early — a <strong>Diploma in Banking &amp; Finance from Nanyang Polytechnic</strong>, followed by a <strong>Bachelor of Business at Nanyang Technological University</strong>, graduating with First Class Honours.</p>
       <p class="pull-quote">"A financial plan should hold up over decades — not just look good in the first meeting."</p>
-      <p>As a <strong>Financial Advisor at Alliance Advisor Group</strong>, I build long-term financial roadmaps for a diverse portfolio of clients — focused on wealth accumulation, retirement readiness, and multi-generational legacy planning. Every recommendation is backed by clear numbers, not sales targets.</p>
+      <p>As a <strong>Financial Advisor at Alliance Advisor Group</strong>, I build long-term financial roadmaps for a diverse portfolio of clients — focused on wealth accumulation, retirement readiness, and multi-generational legacy planning. Every recommendation flows from understanding, not from a template.</p>
       <p>Outside client work, I bring a data-first habit into planning — using tools like Python, SQL, and Tableau to look at numbers more rigorously than a spreadsheet alone allows.</p>
     </div>
     <div class="ledger reveal">
@@ -160,20 +433,20 @@
     <h2 class="sec-title">Different starting points. One goal: a clearer plan.</h2>
     <div class="help-grid stagger">
       <div class="help-card reveal">
-        <div class="help-name serif">Wealth Accumulation</div>
-        <p class="help-desc">Individuals building a long-term financial base — structured for growth over decades, not short-term wins.</p>
+        <div class="help-name serif">Engineers &amp; Young Professionals</div>
+        <p class="help-desc">Structuring first investment roadmaps, managing cash flows, and optimizing wealth accumulation early.</p>
       </div>
       <div class="help-card reveal">
-        <div class="help-name serif">Retirement Readiness</div>
-        <p class="help-desc">Planning for a retirement that's funded and realistic, reviewed regularly as circumstances change.</p>
+        <div class="help-name serif">Couples &amp; Growing Families</div>
+        <p class="help-desc">Planning for key milestones (BTO/property purchases, income protection, and education funding).</p>
       </div>
       <div class="help-card reveal">
-        <div class="help-name serif">Legacy &amp; Multi-Generational Planning</div>
-        <p class="help-desc">Structuring wealth to pass on clearly and intentionally across generations.</p>
+        <div class="help-name serif">Mid-Career &amp; High Earners</div>
+        <p class="help-desc">Tax-efficient wealth preservation, retirement readiness, and multi-generational legacy planning.</p>
       </div>
       <div class="help-card reveal">
-        <div class="help-name serif">Ongoing Portfolio Review</div>
-        <p class="help-desc">For clients who already have a plan in place but want a regular, honest check on whether it still fits.</p>
+        <div class="help-name serif">Existing Portfolio Review</div>
+        <p class="help-desc">A data-driven second opinion for individuals wanting an objective, regular check-up on their current insurance/investment plans.</p>
       </div>
     </div>
   </div>
@@ -216,10 +489,10 @@
       <div class="form-field">
         <label for="topic">What would you like to know about?</label>
         <select id="topic" name="topic" data-fs-field>
-          <option>Wealth Accumulation</option>
-          <option>Retirement Readiness</option>
-          <option>Legacy &amp; Multi-Generational Planning</option>
-          <option>Ongoing Portfolio Review</option>
+          <option>Engineers &amp; Young Professionals</option>
+          <option>Couples &amp; Growing Families</option>
+          <option>Mid-Career &amp; High Earners</option>
+          <option>Existing Portfolio Review</option>
           <option>Something else</option>
         </select>
       </div>
@@ -234,7 +507,7 @@
       <a href="https://wa.me/6584256151?text=Hi%20Nicholas%2C%20I%27d%20like%20to%20discuss%20my%20financial%20plans." class="btn btn-ghost">Or chat on WhatsApp</a>
       <a href="mailto:nicholasliu3005@gmail.com" class="btn btn-ghost">nicholasliu3005@gmail.com</a>
     </div>
-    <p class="disclosure mono">FC 26528 · Alliance Advisor Group. [Add any additional regulatory disclosure wording your firm's compliance team requires.]</p>
+    <p class="disclosure mono">Nicholas Liu is a Financial Consultant (Representative Notification No. 26528) representing Advisors Alliance Group, an authorised agency of AIA Singapore Private Limited (Reg. No. 201106386R). The information on this website is intended for general circulation and informational purposes only. It does not constitute financial advice. To verify a representative's status, please refer to the MAS Register of Representatives. This website has not been reviewed by the Monetary Authority of Singapore.</p>
   </div>
 </section>
 
