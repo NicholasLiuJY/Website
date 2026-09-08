@@ -159,7 +159,7 @@
     box-shadow: 0 4px 12px rgba(217, 119, 6, 0.1);
   }
 
-  .impact-scenario {
+  .impact-profile-label {
     color: var(--color-amber);
     font-weight: 600;
     font-size: 0.875rem;
@@ -252,12 +252,24 @@
 
   .disclosure {
     color: var(--color-slate-medium);
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     margin-top: 2rem;
-    line-height: 1.5;
-    max-width: 90%;
+    line-height: 1.6;
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Hero Image Sizing */
+  .photo-frame {
+    display: flex;
+    align-items: center;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* ============================================================
@@ -328,7 +340,7 @@
     }
 
     .disclosure {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
   }
 </style>
@@ -376,7 +388,7 @@
 <header class="hero wrap">
   <div>
     <div class="eyebrow">Financial Advisory · Alliance Advisor Group</div>
-    <h1 class="serif">Plan with clarity.<br>Build for decades,<br>not market cycles.</h1>
+    <h1 class="serif">Planning with Clarity,<br>Building for Decades</h1>
     <p class="lede">I help individuals and families build long-term financial roadmaps — wealth accumulation, retirement readiness, and multi-generational legacy planning — grounded in clear numbers and regular reviews.</p>
     <p class="lede-note mono">Nicholas Liu · Alliance Advisor Group · FC 26528</p>
     <div class="hero-actions">
@@ -437,7 +449,7 @@
       <p>Outside client work, I bring a data-first habit into planning — using tools like Python, SQL, and Tableau to look at numbers more rigorously than a spreadsheet alone allows.</p>
     </div>
     <div class="ledger reveal">
-      <div class="ledger-row"><span class="k">ROLE</span><span class="v">Financial Advisor</span></div>
+      <div class="ledger-row"><span class="k">ROLE</span><span class="v"><strong>Financial Advisor</strong></span></div>
       <div class="ledger-row"><span class="k">FIRM</span><span class="v">Alliance Advisor Group</span></div>
       <div class="ledger-row"><span class="k">EDUCATION</span><span class="v">NTU · Bachelor of Business</span></div>
       <div class="ledger-row"><span class="k">PRIOR</span><span class="v">NYP · Banking &amp; Finance</span></div>
@@ -516,7 +528,7 @@
     <h2 class="sec-title reveal">How structured, data-driven planning solves real problems across life stages.</h2>
     <div class="help-grid stagger">
       <div class="impact-card reveal">
-        <div class="impact-scenario mono">SCENARIO 1</div>
+        <div class="impact-profile-label mono">CLIENT PROFILE 1</div>
         <div class="impact-title serif">Early BTO &amp; Cash Flow Planning</div>
         <div class="impact-profile">Year 3 University Student, 22</div>
         <div class="impact-section">
@@ -529,7 +541,7 @@
         </div>
       </div>
       <div class="impact-card reveal">
-        <div class="impact-scenario mono">SCENARIO 2</div>
+        <div class="impact-profile-label mono">CLIENT PROFILE 2</div>
         <div class="impact-title serif">First Paycheck Optimization</div>
         <div class="impact-profile">Fresh Software Engineering Graduate, 25</div>
         <div class="impact-section">
@@ -542,7 +554,7 @@
         </div>
       </div>
       <div class="impact-card reveal">
-        <div class="impact-scenario mono">SCENARIO 3</div>
+        <div class="impact-profile-label mono">CLIENT PROFILE 3</div>
         <div class="impact-title serif">Family Protection &amp; Education Roadmap</div>
         <div class="impact-profile">Working Professionals with a Newborn, 30</div>
         <div class="impact-section">
@@ -555,7 +567,7 @@
         </div>
       </div>
       <div class="impact-card reveal">
-        <div class="impact-scenario mono">SCENARIO 4</div>
+        <div class="impact-profile-label mono">CLIENT PROFILE 4</div>
         <div class="impact-title serif">Post-CPF Retirement Yield Strategy</div>
         <div class="impact-profile">Pre-Retiree, 58</div>
         <div class="impact-section">
