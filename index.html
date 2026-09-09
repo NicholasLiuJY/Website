@@ -272,6 +272,18 @@
     display: block;
   }
 
+  /* About section image adjustment */
+  .about-grid .photo-frame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-grid .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   /* ============================================================
      MOBILE FLOATING WHATSAPP BUTTON
      ============================================================ */
@@ -351,17 +363,17 @@
 
 <a href="https://wa.me/6584256151?text=Hi%20Nicholas%2C%20I%27d%20like%20to%20discuss%20my%20financial%20plans." class="floating-whatsapp" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.347-.363-.644-.363h-.004c-.297 0-.676.11-.948.517-.272.406-.956 1.409-.956 2.747s.household 3.535 2.08 3.686m5.009-9.77c1.71.295 3.18 1.045 4.332 2.273 1.15 1.228 1.9 2.719 2.216 4.313.148.784.11 2.365-.074 3.265-.363 1.9-1.45 3.565-3.018 4.683-.75.532-2.365 1.228-3.516 1.52-.75.184-2.44.24-3.35.11-1.154-.184-2.255-.406-3.313-.787-1.228-.432-2.365-1.05-3.350-1.865-.986-.814-1.674-1.57-2.326-2.627m-1.302-7.64c1.898-1.045 4.073-1.56 6.398-1.56 2.33 0 4.5.515 6.4 1.56 1.899 1.046 3.535 2.516 4.78 4.332 1.228 1.826 1.899 3.95 1.899 6.21 0 2.255-.671 4.38-1.898 6.21-1.246 1.817-2.882 3.286-4.782 4.332-1.898 1.046-4.07 1.56-6.398 1.56-2.328 0-4.5-.514-6.398-1.56-1.9-1.046-3.536-2.515-4.782-4.332-1.228-1.83-1.898-3.955-1.898-6.21 0-2.26.67-4.384 1.898-6.21C1.28 7.87 2.916 6.4 4.814 5.356"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.09-.458.13-.606.237-.15.52-.39.78-.59.26-.2.347-.326.52-.543.173-.217.087-.433-.043-.606-.13-.173-.67-1.615-.92-2.206-.24-.576-.487-.498-.67-.507-.173-.01-.373-.01-.572-.01-.2 0-.523.074-.796.367-.274.294-.74.72-.74 1.756s.76 2.035.868 2.175c.107.14 1.523 2.323 3.69 3.258 1.54.644 2.154.645 2.925.431.285-.071 1.56-.636 1.566-1.25.01-.614-.474-.9-.823-1z"/>
   </svg>
   Chat on WhatsApp
 </a>
 
 <div class="social-rail">
   <a href="https://www.instagram.com/nicholas_liujy/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M17.5 6.5h.01"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M19 5h-14a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/></svg>
   </a>
   <a href="https://www.youtube.com/@NicholasLJY" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10.5 9L15 12l-4.5 3v-6z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10.5 9L15 12l-4.5 3z"/></svg>
   </a>
   <a href="https://t.me/NicLiuJY" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2 10.2l6 2.2m0 0L14.6 20l3.6-6.6M8.6 12.4L2 10.2"/></svg>
@@ -389,7 +401,7 @@
   <div>
     <div class="eyebrow">Financial Advisory · Alliance Advisor Group</div>
     <h1 class="serif">Planning with Clarity,<br>Building for Decades</h1>
-    <p class="lede">I help individuals and families build long-term financial roadmaps — wealth accumulation, retirement readiness, and multi-generational legacy planning — grounded in clear numbers and regular reviews.</p>
+    <p class="lede">I help individuals and families build long-term financial roadmaps — wealth accumulation, retirement readiness, and multi-generational legacy planning — grounded in clear numbers and decades of perspective.</p>
     <p class="lede-note mono">Nicholas Liu · Alliance Advisor Group · FC 26528</p>
     <div class="hero-actions">
       <a href="https://wa.me/6584256151?text=Hi%20Nicholas%2C%20I%27d%20like%20to%20discuss%20my%20financial%20plans." class="btn btn-primary">Chat on WhatsApp</a>
@@ -443,10 +455,9 @@
     <div class="about-text reveal">
       <div class="sec-tag mono">MY STORY</div>
       <h2 class="sec-title">Trained in numbers. Focused on people.</h2>
-      <p>My background in finance started early — a <strong>Diploma in Banking &amp; Finance from Nanyang Polytechnic</strong>, followed by a <strong>Bachelor of Business at Nanyang Technological University with First Class Honours</strong>. But degrees alone don't make a good advisor.</p>
+      <p>My background in finance started early — a <strong>Diploma in Banking &amp; Finance from Nanyang Polytechnic</strong>, followed by a <strong>Bachelor of Business at Nanyang Technological University</strong> with <strong>First Class Honours</strong>.</p>
       <p class="pull-quote">"A financial plan should hold up over decades — not just look good in the first meeting."</p>
-      <p>As a <strong>Financial Advisor at Alliance Advisor Group</strong>, I build long-term financial roadmaps for a diverse portfolio of clients — focused on wealth accumulation, retirement readiness, and multi-generational legacy planning. The work is personal; I take time to understand each person's goals, constraints, and what matters most to them.</p>
-      <p>Outside client work, I bring a data-first habit into planning — using tools like Python, SQL, and Tableau to look at numbers more rigorously than a spreadsheet alone allows.</p>
+      <p>As a <strong>Financial Advisor at Alliance Advisor Group</strong>, I build long-term financial roadmaps for a diverse portfolio of clients — focused on wealth accumulation, retirement readiness, and legacy planning across family generations.</p>
     </div>
     <div class="ledger reveal">
       <div class="ledger-row"><span class="k">ROLE</span><span class="v"><strong>Financial Advisor</strong></span></div>
@@ -537,7 +548,7 @@
         </div>
         <div class="impact-section">
           <div class="impact-label">Approach &amp; Outcome:</div>
-          <div class="impact-text">Modeled a 5-year multi-stage savings roadmap, mapping out CPF Ordinary Account projections alongside high-liquidity cash buffers to ensure house key readiness without financial stress.</div>
+          <div class="impact-text">Modeled a 5-year multi-stage savings roadmap, mapping out CPF Ordinary Account projections alongside high-liquidity cash buffers to ensure house key readiness without lifestyle compromise.</div>
         </div>
       </div>
       <div class="impact-card reveal">
@@ -563,7 +574,7 @@
         </div>
         <div class="impact-section">
           <div class="impact-label">Approach &amp; Outcome:</div>
-          <div class="impact-text">Conducted a complete coverage gap analysis, securing child medical coverage while structuring a disciplined wealth accumulation plan targeted at university tuition costs 18 years down the road.</div>
+          <div class="impact-text">Conducted a complete coverage gap analysis, securing child medical coverage while structuring a disciplined wealth accumulation plan targeted at university tuition costs 18 years ahead.</div>
         </div>
       </div>
       <div class="impact-card reveal">
@@ -576,7 +587,7 @@
         </div>
         <div class="impact-section">
           <div class="impact-label">Approach &amp; Outcome:</div>
-          <div class="impact-text">Structured a balanced income portfolio focused on defensive dividend-yielding assets and capital preservation, generating predictable quarterly income payouts to supplement retirement lifestyle needs.</div>
+          <div class="impact-text">Structured a balanced income portfolio focused on defensive dividend-yielding assets and capital preservation, generating predictable quarterly income payouts to supplement CPF LIFE withdrawals.</div>
         </div>
       </div>
     </div>
@@ -638,7 +649,7 @@
       <a href="https://wa.me/6584256151?text=Hi%20Nicholas%2C%20I%27d%20like%20to%20discuss%20my%20financial%20plans." class="btn btn-ghost">Or chat on WhatsApp</a>
       <a href="mailto:nicholasliu3005@gmail.com" class="btn btn-ghost">nicholasliu3005@gmail.com</a>
     </div>
-    <p class="disclosure mono">Nicholas Liu is a Financial Consultant (Representative Notification No. 26528) representing Advisors Alliance Group, an authorised agency of AIA Singapore Private Limited (Reg. No. 201106386R). The information on this website is intended for general circulation and informational purposes only. It does not constitute financial advice. To verify a representative's status, please refer to the MAS Register of Representatives. This website has not been reviewed by the Monetary Authority of Singapore.</p>
+    <p class="disclosure mono">Nicholas Liu is a Financial Consultant (Representative Notification No. 26528) representing Advisors Alliance Group, an authorised agency of AIA Singapore Private Limited. This site and its contents do not constitute financial advice. Your specific circumstances determine suitability of any product or strategy discussed. Seek qualified advice before making investment decisions. MAS registration and conduct standards apply.</p>
   </div>
 </section>
 
